@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "name": "Huy",
+    "phone": "999-999-999",
+    "email": "admin@huy.com"
+  },
+  {
+    "id": 1,
+    "name": "Messi",
+    "phone": "123-456-789",
+    "email": "messi@huy.com"
+  },
+  {
+    "id": 2,
+    "name": "Ronaldo",
+    "phone": "000-456-789",
+    "email": "ronaldo@huy.com"
+  }
+]
