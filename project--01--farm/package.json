@@ -1,0 +1,14 @@
+{
+  "name": "project--01--farm",
+  "version": "1.0.0",
+  "description": "Farm project",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "huyphamfc",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
