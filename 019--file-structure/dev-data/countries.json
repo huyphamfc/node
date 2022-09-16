@@ -1,0 +1,5 @@
+[
+  { "id": 0, "name": "VN", "capital": "Ha Noi" },
+  { "id": 1, "name": "England", "capital": "London" },
+  { "id": 2, "name": "Spain", "capital": "Madrid" }
+]
