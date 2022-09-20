@@ -66,3 +66,19 @@ exports.updateTour = async (req, res) => {
         });
     }
 }
+
+exports.deleteTour = async (req, res) => {
+    try {
+        const result = await Tour.findByIdAndDelete(req.params.id);
+        if (!result) throw 'Invalid ID.';
+        res.status(204).json({
+            status: 'success',
+            data: null
+        });
+    } catch (er) {
+        res.status(404).json({
+            status: 'fail',
+            message: err
+        });
+    }
+}
