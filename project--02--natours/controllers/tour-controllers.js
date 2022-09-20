@@ -19,10 +19,19 @@ exports.createTour = async (req, res) => {
 
 exports.getAllTours = async (req, res) => {
     try {
-        const tours = await Tour.find();
+        let query = { ...req.query };
+        const excludedFields = ['page', 'sort', 'limit', 'fields'];
+        excludedFields.forEach(field => delete query[field]);
+
+        query = JSON
+            .stringify(query)
+            .replace(/\b(gte|gt|lte|lt)/g, pattern => `$${pattern}`);
+        query = JSON.parse(query);
+
+        const tours = await Tour.find(query);
         res.status(200).json({
             status: 'success',
-            data: { tours }
+            data: tours
         });
     } catch (err) {
         res.status(404).json({
