@@ -1,0 +1,74 @@
+[
+  {
+    "name": "A",
+    "grade": 2,
+    "score": 8,
+    "address": "Vietnam"
+  },
+  {
+    "name": "C",
+    "grade": 1,
+    "score": 5,
+    "address": "Laos"
+  },
+  {
+    "name": "E",
+    "grade": 3,
+    "score": 9,
+    "address": "Vietnam"
+  },
+  {
+    "name": "B",
+    "grade": 2,
+    "score": 4,
+    "address": "China"
+  },
+  {
+    "name": "A",
+    "grade": 2,
+    "score": 9,
+    "address": "Singapore"
+  },
+  {
+    "name": "F",
+    "grade": 3,
+    "score": 10,
+    "address": "Hongkong"
+  },
+  {
+    "name": "D",
+    "grade": 1,
+    "score": 9,
+    "address": "Thailand"
+  },
+  {
+    "name": "G",
+    "grade": 3,
+    "score": 6,
+    "address": "Malaysia"
+  },
+  {
+    "name": "C",
+    "grade": 2,
+    "score": 5,
+    "address": "Vietnam"
+  },
+  {
+    "name": "G",
+    "grade": 3,
+    "score": 3,
+    "address": "Cambodia"
+  },
+  {
+    "name": "E",
+    "grade": 1,
+    "score": 7,
+    "address": "Laos"
+  },
+  {
+    "name": "F",
+    "grade": 3,
+    "score": 9,
+    "address": "Vietnam"
+  }
+]
