@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Idea",
+    "duration": 3
+  },
+  {
+    "name": "Designing Layout",
+    "duration": 7
+  },
+  {
+    "name": "Building Website",
+    "duration": 15
+  },
+  {
+    "name": "Testing and Optimizing",
+    "duration": 5
+  },
+  {
+    "name": "Launching",
+    "duration": 2
+  }
+]
