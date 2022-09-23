@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Obama",
+    "size": "small",
+    "price": 19,
+    "quantity": 10,
+    "date": 2020
+  },
+  {
+    "name": "Obama",
+    "size": "medium",
+    "price": 20,
+    "quantity": 20,
+    "date": 2021
+  },
+  {
+    "name": "Obama",
+    "size": "large",
+    "price": 21,
+    "quantity": 30,
+    "date": 2021
+  },
+  {
+    "name": "Trump",
+    "size": "small",
+    "price": 12,
+    "quantity": 15,
+    "date": 2022
+  },
+  {
+    "name": "Trump",
+    "size": "medium",
+    "price": 13,
+    "quantity": 50,
+    "date": 2020
+  },
+  {
+    "name": "Trump",
+    "size": "large",
+    "price": 14,
+    "quantity": 10,
+    "date": 2022
+  },
+  {
+    "name": "Biden",
+    "size": "small",
+    "price": 17,
+    "quantity": 10,
+    "date": 2022
+  },
+  {
+    "name": "Biden",
+    "size": "medium",
+    "price": 18,
+    "quantity": 10,
+    "date": 2021
+  }
+]
