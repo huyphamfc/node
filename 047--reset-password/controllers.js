@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 const validateEmail = require('validator');
 const nodemailer = require('nodemailer');
+const crypto = require('crypto');
 const AccountModel = require('./model');
 
 // prettier-ignore
@@ -195,7 +196,7 @@ exports.forgotPassword = async (req, res) => {
     await account.save({ validateBeforeSave: false });
 
     // prettier-ignore
-    const resetURL = `${req.protocol}://${req.get('host')}/accounts/reset-password${passwordResetToken}`;
+    const resetURL = `${req.protocol}://${req.get('host')}/accounts/reset-password/${passwordResetToken}`;
 
     const transporter = nodemailer.createTransport({
       host: process.env.NODEMAILER_HOST,
@@ -233,6 +234,40 @@ exports.forgotPassword = async (req, res) => {
     res.status(404).json({
       status: 'fail',
       message: err,
+    });
+  }
+};
+
+exports.resetPassword = async (req, res) => {
+  try {
+    const passwordResetToken = crypto
+      .createHash('sha256')
+      .update(req.params.token)
+      .digest('hex');
+
+    const account = await AccountModel.findOne({
+      passwordResetToken,
+      passwordResetTokenExpireAt: { $gt: Date.now() },
+    });
+    if (!account) throw 'Token is invalid or expired.';
+
+    account.password = req.body.password;
+    account.passwordConfirmation = req.body.passwordConfirmation;
+    account.passwordResetToken = undefined;
+    account.passwordResetTokenExpireAt = undefined;
+    account.passwordUpdateAt = Date.now();
+    await account.save();
+
+    const token = createToken(account._id);
+
+    res.status(200).json({
+      status: 'success',
+      token,
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: 'fail',
+      message: err.message,
     });
   }
 };

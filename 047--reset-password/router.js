@@ -10,6 +10,10 @@ accountRouter.route('/login').post(accountControllers.login);
 accountRouter.route('/forgot-password').post(accountControllers.forgotPassword);
 
 accountRouter
+  .route('/reset-password/:token')
+  .patch(accountControllers.resetPassword);
+
+accountRouter
   .route('/')
   .get(accountControllers.protectRoute, accountControllers.getAllAccounts);
 
