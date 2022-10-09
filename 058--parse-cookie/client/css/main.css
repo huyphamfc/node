@@ -1,0 +1,166 @@
+:root {
+    --color-pallet: #1a73e8;
+    --color-warning: #ff0000;
+    --color-gray: #999999;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 1.6rem;
+}
+
+input {
+    outline: none;
+}
+
+.main {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 4.4rem;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.6rem;
+
+    padding: 3.6rem;
+
+    border-radius: 6px;
+    box-shadow: 0 0 4px var(--color-pallet);
+}
+
+.content__text {
+    width: 28rem;
+}
+
+.content__logo {
+    display: flex;
+    align-items: center;
+}
+
+.brand__title {
+    font-size: 3.6rem;
+    padding: 0.8rem 0;
+}
+
+.brand__title span:first-of-type {
+    color: var(--color-pallet);
+}
+
+.brand__title span:nth-of-type(2) {
+    color: var(--color-warning);
+}
+
+.brand__title span:last-of-type {
+    color: #008000;
+}
+
+.brand__guide {
+    font-size: 1.8rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    align-items: stretch;
+
+    padding: 2.4rem 0;
+}
+
+.form__input,
+.form__btn {
+    border-radius: 4px;
+}
+
+.form__input {
+    display: block;
+    width: 100%;
+
+    font-size: 1.6rem;
+    padding: 1.2rem;
+
+    border: 1px solid var(--color-gray);
+    box-shadow: 0 0 2px transparent;
+}
+
+.form__input:focus {
+    border-color: var(--color-pallet);
+    box-shadow: 0 0 2px var(--color-pallet);
+}
+
+.form__warning {
+    display: inline-block;
+
+    font-size: 1.2rem;
+    padding: 0.64rem;
+
+    color: var(--color-warning);
+
+    opacity: 0;
+}
+
+.form__btn {
+    display: inline-block;
+
+    background-color: var(--color-pallet);
+    color: #fff;
+
+    font-size: 1.6rem;
+
+    outline: none;
+    border: 2px solid transparent;
+    padding: 1.2rem 2.4rem;
+
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.form__group.invalid .form__input {
+    border-color: var(--color-warning);
+    box-shadow: 0 0 2px var(--color-warning);
+}
+
+.form__group.invalid .form__warning {
+    opacity: 1;
+}
+
+.form__btn:hover {
+    background-color: #fff;
+    color: var(--color-pallet);
+    border-color: var(--color-pallet);
+}
+
+@media (max-width:48em) {
+    .content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2.4rem;
+
+        padding: 0;
+
+        box-shadow: none;
+    }
+
+    .content__logo {
+        grid-row: 1;
+    }
+
+    .form__btn {
+        width: 100%;
+    }
+}

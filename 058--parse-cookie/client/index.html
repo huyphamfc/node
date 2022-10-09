@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookie Parser</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="content">
+        <div class="content__text">
+          <!-- Brand -->
+          <h1 class="brand__title">
+            <span>H</span><span>u</span><span>y</span>Pro
+          </h1>
+          <p class="brand__guide">Use your HuyPro Account</p>
+
+          <!-- Form -->
+          <form class="form" id="register-form">
+            <!-- Email -->
+            <div class="form__group">
+              <input
+                class="form__input"
+                name="email"
+                aria-label="email"
+                rules="required|email"
+                placeholder="Email"
+              />
+              <span class="form__warning"></span>
+            </div>
+
+            <!-- Password -->
+            <div class="form__group">
+              <input
+                class="form__input"
+                name="password"
+                aria-label="password"
+                rules="required|minLength:8"
+                type="password"
+                placeholder="Password"
+              />
+              <span class="form__warning"></span>
+            </div>
+
+            <!-- Submit -->
+            <button class="form__btn">Log in</button>
+          </form>
+        </div>
+        <div class="content__logo">
+          <img src="./assets/illustration.svg" alt="Huy Logo" />
+        </div>
+      </div>
+    </main>
+  </body>
+  <script type="module" defer src="./js/main.js"></script>
+</html>
